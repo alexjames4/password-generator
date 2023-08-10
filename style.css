@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;	
+}
+
+html {
+    font-size: 10px;
+    font-family:'Lucida Sans', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: #131218;
+    margin: 0;
+}
+
+.generator-container {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input-container {
+    background-color: #24232b;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+}
+
+button {
+    background-color: #a4ffaf;
+}

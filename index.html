@@ -2,31 +2,41 @@
 <html>
     <head>
         <script defer src="script.js"></script>
-        <link rel="stylesheet" type="text/css" href="src/style.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <div>
+        <div class="generator-container">
             <h1>Password Generator</h1>
             <form>
-                <label></label> <!--password input-->
-                <input> 
+                <div class="form-input-container">
+                    <input type="password" name="password" id="password"> <!--password input-->
+                </div>
+                <div class="form-input-container">
+                    <label></label> <!--character length slider-->
+                    <input type="range" id="slider" name="slider" min="0" max="24">
+                    <div class="checkbox-container">
 
-                <label></label> <!--character length slider-->
-                <input>
+                        <label for="incl-uppercase">Include Uppercase letters</label>
+                        <input type="checkbox" class="checkbox" id="incl-uppercase">
 
-                <label></label> <!--checkbox-->
-                <input>
-                <label></label> <!--checkbox-->
-                <input>
-                <label></label> <!--checkbox-->
-                <input>
-                <label></label> <!--checkbox-->
-                <input>
-            
+                        <label for="incl-lowercase">Include Lowercase letters</label>
+                        <input type="checkbox" class="checkbox" id="incl-lowercase">
 
-                <div></div> <!--password strength signaller-->
+                        <label for="incl-numbers">Include Numbers</label>
+                        <input type="checkbox" class="checkbox" id="incl-numbers">
 
-                <button>Generate -></button> <!--submit form button-->
+                        <label for="incl-symbols">Include Symbols</label>
+                        <input type="checkbox" class="checkbox" id="incl-symbols">
+                    </div>
+                    
+                    
+                
+
+                    <div></div> <!--password strength signaller-->
+
+                    <button>Generate -></button> <!--submit form button-->
+                </div>
+                
             </form>
         </div>
     </body>
