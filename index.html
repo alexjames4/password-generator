@@ -8,33 +8,33 @@
         <div class="generator-container">
             <h1>Password Generator</h1>
             <form>
-                <div class="form-input-container">
-                    <input type="password" name="password" id="password"> <!--password input-->
+                <div class="password-container">
+                    <input type="text" name="password" id="password" class="password">
                 </div>
                 <div class="form-input-container">
-                    <label></label> <!--character length slider-->
+                    <label>Character Length</label>
                     <input type="range" id="slider" name="slider" min="0" max="24">
-                    <div class="checkbox-container">
-
-                        <label for="incl-uppercase">Include Uppercase letters</label>
-                        <input type="checkbox" class="checkbox" id="incl-uppercase">
-
-                        <label for="incl-lowercase">Include Lowercase letters</label>
-                        <input type="checkbox" class="checkbox" id="incl-lowercase">
-
-                        <label for="incl-numbers">Include Numbers</label>
-                        <input type="checkbox" class="checkbox" id="incl-numbers">
-
-                        <label for="incl-symbols">Include Symbols</label>
-                        <input type="checkbox" class="checkbox" id="incl-symbols">
+                    <div class="checkboxes-container">
+                        <div class="checkbox-container">
+                            <input type="checkbox" class="checkbox" id="incl-uppercase">
+                            <label for="incl-uppercase">Include Uppercase letters</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" class="checkbox" id="incl-lowercase">
+                            <label for="incl-lowercase">Include Lowercase letters</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" class="checkbox" id="incl-numbers">
+                            <label for="incl-numbers">Include Numbers</label>                            
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" class="checkbox" id="incl-symbols">
+                            <label for="incl-symbols">Include Symbols</label>                            
+                        </div>                   
                     </div>
-                    
-                    
-                
-
                     <div></div> <!--password strength signaller-->
 
-                    <button>Generate -></button> <!--submit form button-->
+                    <button class="generate-password-btn">Generate -></button>
                 </div>
                 
             </form>

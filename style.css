@@ -3,7 +3,7 @@
 }
 
 html {
-    font-size: 10px;
+    font-size: 16px;
     font-family:'Lucida Sans', sans-serif;
     color: white;
 }
@@ -16,7 +16,13 @@ body {
 .generator-container {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 300px;
+    margin: auto;
+    padding: 10px;
+}
+
+.generator-container h1 {
+    font-size: 1.2rem;
     margin: auto;
 }
 
@@ -25,17 +31,38 @@ form {
     flex-direction: column;
 }
 
+.password-container {
+    background-color: #24232b;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.password {
+    background-color: #24232b;
+}
+
 .form-input-container {
     background-color: #24232b;
     display: flex;
     flex-direction: column;
+    margin: 5px;
 }
 
-.checkbox-container {
+.checkboxes-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding-left: 10px;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.checkbox {
+    background: #24232b;
 }
 
 button {
