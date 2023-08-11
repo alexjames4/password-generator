@@ -13,7 +13,10 @@
                     <button><img src="src/copy-regular.svg" class="copy-btn"></button>
                 </div>
                 <div class="form-input-container">
-                    <label>Character Length</label>
+                    <div class="slider-heading-value-container">
+                        <p>Character Length</p>
+                        <p class="slider-value"></p>
+                    </div>
                     <input type="range" id="slider" name="slider" min="0" max="24">
                     <div class="checkboxes-container">
                         <div class="checkbox-container">
@@ -33,8 +36,18 @@
                             <label for="incl-symbols">Include Symbols</label>                            
                         </div>                   
                     </div>
-                    <div></div> <!--password strength signaller-->
-
+                    <div class="strength-container">
+                        <p>STRENGTH</p>
+                        <div class="strength-level-alert-container">
+                            <p class="strength-level"></p>
+                            <div class="strength-alert-box-container">
+                                <div class="alert-box" id="alert-box-1"></div>
+                                <div class="alert-box" id="alert-box-2"></div>
+                                <div class="alert-box" id="alert-box-3"></div>
+                                <div class="alert-box" id="alert-box-4"></div>
+                            </div>
+                        </div>
+                    </div>
                     <button class="generate-password-btn">Generate -></button>
                 </div>
                 

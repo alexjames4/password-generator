@@ -35,7 +35,12 @@ form {
     background-color: #24232b;
     display: flex;
     justify-content: space-between;
+    gap: 0px;
     margin: 5px;
+}
+
+.password {
+    width: 100%;
 }
 
 .copy-btn {
@@ -48,6 +53,16 @@ form {
     display: flex;
     flex-direction: column;
     margin: 5px;
+}
+
+.slider-heading-value-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.slider-value {
+    color: #a4ffaf;
 }
 
 .checkboxes-container {
@@ -64,6 +79,34 @@ form {
 
 .checkbox {
     background: #24232b;
+}
+
+.strength-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.strength-level-alert-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.strength-alert-box-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    gap: 5px;
+}
+
+.alert-box {
+    border: solid whitesmoke 1px;
+    height: 20px;
+    width: 5px;
 }
 
 button {
