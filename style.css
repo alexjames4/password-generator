@@ -107,6 +107,7 @@ form {
 }
 
 .alert-box {
+    background-color: #24232b;
     border: solid whitesmoke 1px;
     height: 20px;
     width: 5px;

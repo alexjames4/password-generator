@@ -1,35 +1,37 @@
 function generatePassword(length) {
     let generatedPassword = ''
-    let mergedStringOfChars = ''
+    let stringOfChars = ''
 
     if (document.querySelector('#incl-uppercase').checked) {
-        mergedStringOfChars += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        stringOfChars += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     }
     if (document.querySelector('#incl-lowercase').checked) {
-        mergedStringOfChars += 'abcdefghijklmnopqrstuvwxyz'
+        stringOfChars += 'abcdefghijklmnopqrstuvwxyz'
     }
     if (document.querySelector('#incl-numbers').checked) {
-        mergedStringOfChars += '0123456789'
+        stringOfChars += '0123456789'
     }
     if (document.querySelector('#incl-symbols').checked) {
-        mergedStringOfChars += '~`\'! @#$%^&*()_-+={[}]|\\:;"<,>.?/'
+        stringOfChars += '~`\'! @#$%^&*()_-+={[}]|\\:;"<,>.?/'
     }
 
     for (let i = 0; i < length; i++) {
-        generatedPassword += mergedStringOfChars.charAt(Math.floor(Math.random() * mergedStringOfChars.length))
+        generatedPassword += stringOfChars.charAt(Math.floor(Math.random() * stringOfChars.length))
     }
     return generatedPassword
 }
 
 function determineStrength() {
 
-    // const StrengthLevels = {
-    //     1: 'Low',
-    //     2: 'Med',
-    //     3: 'High'
-    // }
+    const StrengthLevels = {
+        0: '',
+        1: 'WEAK',
+        2: 'OK',
+        3: 'GOOD',
+        4: 'STRONG'
+    }
 
-    // // const checkboxes = document.querySelectorAll('.checkbox:checked').length
+    const checkedCounter = document.querySelectorAll('.checkbox:checked').length
 
     // document.querySelectorAll('.alert-box').forEach(alert => {
     //     const id = alert.id.charAt(11)
@@ -39,18 +41,6 @@ function determineStrength() {
     //     document.querySelector('.strength-level').textContent = StrengthLevels[checkboxes]
     // })
 
-    let strengthArray = [
-        document.querySelector('#incl-uppercase').checked, 
-        document.querySelector('#incl-lowercase').checked, 
-        document.querySelector('#incl-numbers').checked, 
-        document.querySelector('#incl-symbols').checked
-    ]
-    let checkedCounter = 0
-    strengthArray.forEach(checkbox => {
-        if (checkbox == true) {
-            checkedCounter++
-        }
-    })
     if (checkedCounter == 0) {
         document.querySelector('#alert-box-1').style.backgroundColor = '#24232b';
         document.querySelector('#alert-box-2').style.backgroundColor = '#24232b';
