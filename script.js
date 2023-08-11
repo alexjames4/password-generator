@@ -22,7 +22,6 @@ function generatePassword(length) {
 }
 
 function determineStrength() {
-
     const StrengthLevels = {
         0: '',
         1: 'WEAK',
@@ -30,53 +29,19 @@ function determineStrength() {
         3: 'GOOD',
         4: 'STRONG'
     }
-
+    
     const checkedCounter = document.querySelectorAll('.checkbox:checked').length
+    
+    document.querySelectorAll('.alert-box').forEach(alert => {
+        const id = alert.id.charAt(10)
 
-    // document.querySelectorAll('.alert-box').forEach(alert => {
-    //     const id = alert.id.charAt(11)
-    //     if (id <= checkboxes) {
-
-    //     }
-    //     document.querySelector('.strength-level').textContent = StrengthLevels[checkboxes]
-    // })
-
-    if (checkedCounter == 0) {
-        document.querySelector('#alert-box-1').style.backgroundColor = '#24232b';
-        document.querySelector('#alert-box-2').style.backgroundColor = '#24232b';
-        document.querySelector('#alert-box-3').style.backgroundColor = '#24232b';
-        document.querySelector('#alert-box-4').style.backgroundColor = '#24232b';
-        document.querySelector('.strength-level').textContent = '';
-    }
-    if (checkedCounter == 1) {
-        document.querySelector('#alert-box-1').style.backgroundColor = '#f7ce66';
-        document.querySelector('#alert-box-2').style.backgroundColor = '#24232b';
-        document.querySelector('#alert-box-3').style.backgroundColor = '#24232b';
-        document.querySelector('#alert-box-4').style.backgroundColor = '#24232b';
-        document.querySelector('.strength-level').textContent = 'WEAK';
-    }
-    if (checkedCounter == 2) {
-        document.querySelector('#alert-box-1').style.backgroundColor = '#f7ce66';
-        document.querySelector('#alert-box-2').style.backgroundColor = '#f7ce66';
-        document.querySelector('#alert-box-3').style.backgroundColor = '#24232b';
-        document.querySelector('#alert-box-4').style.backgroundColor = '#24232b';
-        document.querySelector('.strength-level').textContent = 'OK';
-    }
-    if (checkedCounter == 3) {
-        document.querySelector('#alert-box-1').style.backgroundColor = '#f7ce66';
-        document.querySelector('#alert-box-2').style.backgroundColor = '#f7ce66';
-        document.querySelector('#alert-box-3').style.backgroundColor = '#f7ce66';
-        document.querySelector('#alert-box-4').style.backgroundColor = '#24232b';
-        document.querySelector('.strength-level').textContent = 'GOOD';
-    }
-    if (checkedCounter == 4) {
-        document.querySelector('#alert-box-1').style.backgroundColor = '#f7ce66';
-        document.querySelector('#alert-box-2').style.backgroundColor = '#f7ce66';
-        document.querySelector('#alert-box-3').style.backgroundColor = '#f7ce66';
-        document.querySelector('#alert-box-4').style.backgroundColor = '#f7ce66';
-        document.querySelector('.strength-level').textContent = 'STRONG';
-    }
-
+        if (id <= checkedCounter) {
+            alert.style.backgroundColor = '#f7ce66'
+        } else {
+            alert.style.backgroundColor = '#24232b'
+        }
+        document.querySelector('.strength-level').textContent = StrengthLevels[checkedCounter]
+    })
 }
 
 document.querySelector('#incl-uppercase').addEventListener('click', () => {
