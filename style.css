@@ -38,10 +38,6 @@ form {
     margin: 5px;
 }
 
-.password {
-    background-color: #24232b;
-}
-
 .form-input-container {
     background-color: #24232b;
     display: flex;

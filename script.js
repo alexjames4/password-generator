@@ -12,4 +12,9 @@ function generatePassword(length) {
     }
     return generatedPassword
 }
-    console.log(generatePassword(24))
+
+let length = document.querySelector('#slider').value
+
+let passwordContainerContent = document.querySelector('.password-container').innerHTML
+passwordContainerContent = `<input type="text" name="password" id="password" class="password" placeholder="password123" value="${generatePassword(length)}">`
+document.querySelector('.password-container').innerHTML = passwordContainerContent
