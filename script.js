@@ -40,17 +40,29 @@ function determineStrength() {
             checkedCounter++
         }
     })
+    if (checkedCounter == 0) {
+        document.querySelector('#alert-box-1').style.backgroundColor = '#24232b';
+        document.querySelector('#alert-box-2').style.backgroundColor = '#24232b';
+        document.querySelector('#alert-box-3').style.backgroundColor = '#24232b';
+        document.querySelector('#alert-box-4').style.backgroundColor = '#24232b';
+    }
     if (checkedCounter == 1) {
         document.querySelector('#alert-box-1').style.backgroundColor = '#f7ce66';
+        document.querySelector('#alert-box-2').style.backgroundColor = '#24232b';
+        document.querySelector('#alert-box-3').style.backgroundColor = '#24232b';
+        document.querySelector('#alert-box-4').style.backgroundColor = '#24232b';
     }
     if (checkedCounter == 2) {
         document.querySelector('#alert-box-1').style.backgroundColor = '#f7ce66';
         document.querySelector('#alert-box-2').style.backgroundColor = '#f7ce66';
+        document.querySelector('#alert-box-3').style.backgroundColor = '#24232b';
+        document.querySelector('#alert-box-4').style.backgroundColor = '#24232b';
     }
     if (checkedCounter == 3) {
         document.querySelector('#alert-box-1').style.backgroundColor = '#f7ce66';
         document.querySelector('#alert-box-2').style.backgroundColor = '#f7ce66';
         document.querySelector('#alert-box-3').style.backgroundColor = '#f7ce66';
+        document.querySelector('#alert-box-4').style.backgroundColor = '#24232b';
     }
     if (checkedCounter == 4) {
         document.querySelector('#alert-box-1').style.backgroundColor = '#f7ce66';
@@ -78,7 +90,6 @@ document.querySelector('.generate-password-btn').addEventListener('click', e => 
     e.preventDefault()
     let length = document.querySelector('#slider').value
     document.querySelector('#password').value = generatePassword(length)
-    
 })
 
 document.querySelector('.copy-btn').addEventListener('click', e => {
@@ -86,6 +97,7 @@ document.querySelector('.copy-btn').addEventListener('click', e => {
     let copiedPassword = document.querySelector('#password').value
     navigator.clipboard.writeText(copiedPassword)
 })
+
 document.querySelector('#slider').addEventListener('click', e => {
     document.querySelector('.slider-value').textContent = document.querySelector('#slider').value
 })
