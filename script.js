@@ -1,33 +1,44 @@
 function generatePassword(length) {
     let generatedPassword = ''
-    let uppercaseLetters = ''
-    let lowercaseLetters = ''
-    let numbers = ''
-    let symbols = ''
+    let mergedStringOfChars = ''
 
     if (document.querySelector('#incl-uppercase').checked) {
-        uppercaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        mergedStringOfChars += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     }
     if (document.querySelector('#incl-lowercase').checked) {
-        lowercaseLetters = 'abcdefghijklmnopqrstuvwxyz'
+        mergedStringOfChars += 'abcdefghijklmnopqrstuvwxyz'
     }
     if (document.querySelector('#incl-numbers').checked) {
-        numbers = '0123456789'
+        mergedStringOfChars += '0123456789'
     }
     if (document.querySelector('#incl-symbols').checked) {
-        symbols = '~`\'! @#$%^&*()_-+={[}]|\\:;"<,>.?/'
+        mergedStringOfChars += '~`\'! @#$%^&*()_-+={[}]|\\:;"<,>.?/'
     }
-  
-    let mergedStringOfChars = ''
-    mergedStringOfChars = mergedStringOfChars.concat(uppercaseLetters, lowercaseLetters, numbers, symbols)
-    mergedStringOfCharsLength = mergedStringOfChars.length
+
     for (let i = 0; i < length; i++) {
-        generatedPassword += mergedStringOfChars.charAt(Math.floor(Math.random() * mergedStringOfCharsLength))
+        generatedPassword += mergedStringOfChars.charAt(Math.floor(Math.random() * mergedStringOfChars.length))
     }
     return generatedPassword
 }
 
 function determineStrength() {
+
+    // const StrengthLevels = {
+    //     1: 'Low',
+    //     2: 'Med',
+    //     3: 'High'
+    // }
+
+    // // const checkboxes = document.querySelectorAll('.checkbox:checked').length
+
+    // document.querySelectorAll('.alert-box').forEach(alert => {
+    //     const id = alert.id.charAt(11)
+    //     if (id <= checkboxes) {
+
+    //     }
+    //     document.querySelector('.strength-level').textContent = StrengthLevels[checkboxes]
+    // })
+
     let strengthArray = [
         document.querySelector('#incl-uppercase').checked, 
         document.querySelector('#incl-lowercase').checked, 
@@ -45,30 +56,35 @@ function determineStrength() {
         document.querySelector('#alert-box-2').style.backgroundColor = '#24232b';
         document.querySelector('#alert-box-3').style.backgroundColor = '#24232b';
         document.querySelector('#alert-box-4').style.backgroundColor = '#24232b';
+        document.querySelector('.strength-level').textContent = '';
     }
     if (checkedCounter == 1) {
         document.querySelector('#alert-box-1').style.backgroundColor = '#f7ce66';
         document.querySelector('#alert-box-2').style.backgroundColor = '#24232b';
         document.querySelector('#alert-box-3').style.backgroundColor = '#24232b';
         document.querySelector('#alert-box-4').style.backgroundColor = '#24232b';
+        document.querySelector('.strength-level').textContent = 'WEAK';
     }
     if (checkedCounter == 2) {
         document.querySelector('#alert-box-1').style.backgroundColor = '#f7ce66';
         document.querySelector('#alert-box-2').style.backgroundColor = '#f7ce66';
         document.querySelector('#alert-box-3').style.backgroundColor = '#24232b';
         document.querySelector('#alert-box-4').style.backgroundColor = '#24232b';
+        document.querySelector('.strength-level').textContent = 'OK';
     }
     if (checkedCounter == 3) {
         document.querySelector('#alert-box-1').style.backgroundColor = '#f7ce66';
         document.querySelector('#alert-box-2').style.backgroundColor = '#f7ce66';
         document.querySelector('#alert-box-3').style.backgroundColor = '#f7ce66';
         document.querySelector('#alert-box-4').style.backgroundColor = '#24232b';
+        document.querySelector('.strength-level').textContent = 'GOOD';
     }
     if (checkedCounter == 4) {
         document.querySelector('#alert-box-1').style.backgroundColor = '#f7ce66';
         document.querySelector('#alert-box-2').style.backgroundColor = '#f7ce66';
         document.querySelector('#alert-box-3').style.backgroundColor = '#f7ce66';
         document.querySelector('#alert-box-4').style.backgroundColor = '#f7ce66';
+        document.querySelector('.strength-level').textContent = 'STRONG';
     }
 
 }
@@ -98,6 +114,8 @@ document.querySelector('.copy-btn').addEventListener('click', e => {
     navigator.clipboard.writeText(copiedPassword)
 })
 
-document.querySelector('#slider').addEventListener('click', e => {
+document.querySelector('#slider').addEventListener('input', e => {
     document.querySelector('.slider-value').textContent = document.querySelector('#slider').value
 })
+
+document.querySelector('.slider-value').textContent = document.querySelector('#slider').value
