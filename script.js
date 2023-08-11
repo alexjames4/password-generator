@@ -27,8 +27,15 @@ function generatePassword(length) {
     return generatedPassword
 }
 
+document.querySelector('.generate-password-btn').addEventListener('click', e => {
+    e.preventDefault()
+    let length = document.querySelector('#slider').value
+    document.querySelector('#password').value = generatePassword(length)
+    console.log(document.querySelector('#password').value)
+})
 
-let length = document.querySelector('#slider').value
-
-document.querySelector('#password').value = generatePassword(length)
-console.log(document.querySelector('#password').value)
+document.querySelector('.copy-btn').addEventListener('click', e => {
+    e.preventDefault()
+    let copiedPassword = document.querySelector('#password').value
+    navigator.clipboard.writeText(copiedPassword)
+})

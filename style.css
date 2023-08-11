@@ -34,8 +34,13 @@ form {
 .password-container {
     background-color: #24232b;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     margin: 5px;
+}
+
+.copy-btn {
+    width: 20px;
+    height: 20px;
 }
 
 .form-input-container {
