@@ -16,7 +16,7 @@ body {
 .generator-container {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: auto;
     margin: auto;
     padding: 10px;
 }
@@ -115,4 +115,10 @@ form {
 
 button {
     background-color: #a4ffaf;
+}
+
+@media screen and (min-width:400px) {
+    .generator-container {
+        width: 300px;
+    }
 }
