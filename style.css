@@ -119,6 +119,6 @@ button {
 
 @media screen and (min-width:550px) {
     .generator-container {
-        width: 300px;
+        width: 500px;
     }
 }
