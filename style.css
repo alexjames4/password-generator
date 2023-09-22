@@ -3,7 +3,7 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 14px;
     font-family:'Lucida Sans', sans-serif;
     color: white;
 }
@@ -22,7 +22,7 @@ body {
 }
 
 .generator-container h1 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin: auto;
 }
 
@@ -37,7 +37,6 @@ form {
     justify-content: space-between;
     gap: 0px;
     margin: 5px;
-    height: 75px;
 }
 
 .password {
@@ -47,6 +46,9 @@ form {
 .copy-btn {
     width: 20px;
     height: 20px;
+}
+.generate-password-btn {
+    font-size: 1.2rem;
 }
 
 .form-input-container {
@@ -60,6 +62,7 @@ form {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    font-size: 1.3rem;
 }
 
 .slider-value {
@@ -76,6 +79,7 @@ form {
 .checkbox-container {
     display: flex;
     flex-wrap: nowrap;
+    font-size: 1.2rem;
 }
 
 .checkbox {
