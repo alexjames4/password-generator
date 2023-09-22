@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script defer src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="generator-container">
+            <h1>Password Generator</h1>
+            <form>
+                <div class="password-container">
+                    <input type="text" name="password" id="password" class="password" placeholder="password123">
+                    <button><img src="src/copy-regular.svg" class="copy-btn"></button>
+                </div>
+                <div class="form-input-container">
+                    <div class="slider-heading-value-container">
+                        <p>Character Length</p>
+                        <p class="slider-value"></p>
+                    </div>
+                    <input type="range" id="slider" name="slider" min="0" max="24">
+                    <div class="checkboxes-container">
+                        <div class="checkbox-container">
+                            <input type="checkbox" class="checkbox" id="incl-uppercase">
+                            <label for="incl-uppercase">Include Uppercase letters</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" class="checkbox" id="incl-lowercase">
+                            <label for="incl-lowercase">Include Lowercase letters</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" class="checkbox" id="incl-numbers">
+                            <label for="incl-numbers">Include Numbers</label>                            
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" class="checkbox" id="incl-symbols">
+                            <label for="incl-symbols">Include Symbols</label>                            
+                        </div>                   
+                    </div>
+                    <div class="strength-container">
+                        <p>STRENGTH</p>
+                        <div class="strength-level-alert-container">
+                            <p class="strength-level"></p>
+                            <div class="strength-alert-box-container">
+                                <div class="alert-box" id="alert-box-1"></div>
+                                <div class="alert-box" id="alert-box-2"></div>
+                                <div class="alert-box" id="alert-box-3"></div>
+                                <div class="alert-box" id="alert-box-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="generate-password-btn">Generate -></button>
+                </div>
+                
+            </form>
+        </div>
+    </body>
+</html>

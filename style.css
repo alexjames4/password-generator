@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;	
+}
+
+html {
+    font-size: 16px;
+    font-family:'Lucida Sans', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: #131218;
+    margin: 0;
+}
+
+.generator-container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+    padding: 10px;
+}
+
+.generator-container h1 {
+    font-size: 1.2rem;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.password-container {
+    background-color: #24232b;
+    display: flex;
+    justify-content: space-between;
+    gap: 0px;
+    margin: 5px;
+}
+
+.password {
+    width: 100%;
+}
+
+.copy-btn {
+    width: 20px;
+    height: 20px;
+}
+
+.form-input-container {
+    background-color: #24232b;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.slider-heading-value-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.slider-value {
+    color: #a4ffaf;
+}
+
+.checkboxes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.checkbox {
+    background: #24232b;
+}
+
+.strength-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.strength-level-alert-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.strength-level {
+    margin: 5px;
+}
+
+.strength-alert-box-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    gap: 5px;
+}
+
+.alert-box {
+    background-color: #24232b;
+    border: solid whitesmoke 1px;
+    height: 20px;
+    width: 5px;
+}
+
+button {
+    background-color: #a4ffaf;
+}
