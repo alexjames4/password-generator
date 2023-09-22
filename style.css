@@ -3,7 +3,7 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 40px;
     font-family:'Lucida Sans', sans-serif;
     color: white;
 }
@@ -37,6 +37,7 @@ form {
     justify-content: space-between;
     gap: 0px;
     margin: 5px;
+    height: 75px;
 }
 
 .password {
@@ -88,6 +89,10 @@ form {
     align-items: center;
     padding-left: 5px;
     padding-right: 5px;
+}
+
+input::placeholder {
+    font-size: 0.8rem;
 }
 
 .strength-level-alert-container {
